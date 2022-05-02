@@ -43,7 +43,7 @@
                   <Font name="Century Gothic" size="15.0" />
                </font>
             </TextField>
-            <ComboBox fx:id="experiencecombo" prefHeight="32.0" prefWidth="178.0" promptText="Experience Required" />
+            <ComboBox fx:id="experiencecombo" prefHeight="32.0" prefWidth="225.0" promptText="Experience Required" />
             <TextField fx:id="salarytxt" prefHeight="28.0" prefWidth="178.0" promptText="Salary">
                <font>
                   <Font name="Century Gothic" size="15.0" />

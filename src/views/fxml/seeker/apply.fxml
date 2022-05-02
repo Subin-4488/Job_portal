@@ -2,6 +2,7 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -9,7 +10,11 @@
    <children>
       <ComboBox fx:id="filterbycombo" layoutX="48.0" layoutY="27.0" onAction="#setFilter" prefHeight="33.0" prefWidth="194.0" promptText="Filter by" />
       <ComboBox fx:id="filtercombo" layoutX="275.0" layoutY="27.0" onAction="#getFilterData" prefHeight="34.0" prefWidth="194.0" promptText="Choose" visible="false" />
-      <VBox fx:id="vbox" alignment="TOP_CENTER" layoutX="1.0" layoutY="72.0" prefHeight="416.0" prefWidth="518.0" />
+      <ScrollPane layoutX="1.0" layoutY="72.0">
+         <content>
+            <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="416.0" prefWidth="518.0" />
+         </content>
+      </ScrollPane>
    </children>
    <stylesheets>
       <URL value="@../../css/combobox.css" />
