@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.provider.JobPostController">
+   <stylesheets>
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/textfield.css" />
+      <URL value="@../../css/combobox.css" />
+   </stylesheets>
+   <children>
+      <AnchorPane prefHeight="68.0" prefWidth="522.0" style="-fx-background-color: #000051;">
+         <children>
+            <Label layoutX="194.0" layoutY="24.0" text="JOB POST SECTION" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox alignment="CENTER" layoutX="63.0" layoutY="68.0" prefHeight="428.0" prefWidth="395.0" spacing="30.0">
+         <children>
+            <TextField fx:id="titletxt" prefHeight="28.0" prefWidth="327.0" promptText="Job Title">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="descriptiontxt" prefHeight="152.0" prefWidth="327.0" promptText="Job Description" wrapText="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="locationtxt" prefHeight="28.0" prefWidth="327.0" promptText="Job Location">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="experiencecombo" prefHeight="32.0" prefWidth="178.0" promptText="Experience Required" />
+            <TextField fx:id="salarytxt" prefHeight="28.0" prefWidth="178.0" promptText="Salary">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </VBox>
+      <Button fx:id="jobpostbtn" layoutX="161.0" layoutY="511.0" mnemonicParsing="false" onAction="#jobPostAction" prefHeight="40.0" prefWidth="198.0" text="POST">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

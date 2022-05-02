@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox fx:id="vbox" alignment="CENTER" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.provider.viewAnalyticsController">
+   <children>
+      <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="507.0">
+         <children>
+            <Button fx:id="jobspostedbtn" layoutX="79.0" layoutY="140.0" mnemonicParsing="false" onAction="#listJobsPosted" prefHeight="95.0" prefWidth="150.0" text="Jobs Posted">
+               <stylesheets>
+                  <URL value="@../../css/button.css" />
+                  <URL value="@../../css/textfield.css" />
+               </stylesheets>
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="viewapplicatinsbtn" layoutX="260.0" layoutY="140.0" mnemonicParsing="false" onAction="#viewApplicantsAction" prefHeight="95.0" prefWidth="150.0" text="View Applicants">
+               <stylesheets>
+                  <URL value="@../../css/button.css" />
+                  <URL value="@../../css/textfield.css" />
+               </stylesheets>
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

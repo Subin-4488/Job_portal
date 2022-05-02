@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignupProviderController">
+   <children>
+      <AnchorPane prefHeight="38.0" prefWidth="700.0" style="-fx-background-color: #000051;" />
+      <AnchorPane layoutY="38.0" prefHeight="82.0" prefWidth="700.0" style="-fx-background-color: #1a237e;">
+         <children>
+            <Label alignment="CENTER" layoutX="250.0" layoutY="18.0" prefHeight="45.0" prefWidth="200.0" text="SIGNUP" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="212.0" layoutY="154.0" prefHeight="46.0" prefWidth="276.0" text="Company Information">
+         <font>
+            <Font name="Century Gothic" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nametxt" layoutX="212.0" layoutY="209.0" prefHeight="38.0" prefWidth="276.0" promptText="Company Name">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailtxt" layoutX="212.0" layoutY="261.0" prefHeight="38.0" prefWidth="276.0" promptText="Email">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="city" layoutX="212.0" layoutY="328.0" prefHeight="32.0" prefWidth="192.0" promptText="City" visibleRowCount="3" />
+      <ComboBox fx:id="type" layoutX="212.0" layoutY="385.0" prefHeight="32.0" prefWidth="192.0" promptText="Organization Type" visibleRowCount="3" />
+      <PasswordField fx:id="passtxt" layoutX="212.0" layoutY="439.0" prefHeight="26.0" prefWidth="276.0" promptText="Password">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="signupbtn" layoutX="212.0" layoutY="494.0" mnemonicParsing="false" onAction="#signupAction" prefHeight="38.0" prefWidth="276.0" text="Signup">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="backbtn" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="130.0" onMousePressed="#backButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../css/button.css" />
+      <URL value="@../css/textfield.css" />
+      <URL value="@../css/combobox.css" />
+   </stylesheets>
+</AnchorPane>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="profilePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.seeker.ProfileController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-5.0" layoutY="-5.0" prefHeight="509.0" prefWidth="522.0" spacing="10.0">
+         <children>
+            <ImageView fx:id="avatar" fitHeight="121.0" fitWidth="117.0" onMouseClicked="#uploadPhoto" onMousePressed="#uploadPhoto" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../assets/avatar.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Personal Data" underline="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="nametxt" text="Name">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatename" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="emailtxt" text="Email">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updateemail" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="mobiletxt" text="Mobile">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatemobile" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="citytxt" text="City">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatecity" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="dobtxt" text="Date of birth">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatedob" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="gendertxt" text="Gender">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updategender" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutY="505.0" prefHeight="269.0" prefWidth="522.0" spacing="10.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Academics" underline="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="schooltxt" promptText="School name">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updateschool" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="streamtxt" promptText="Stream">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatestream" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <TextField fx:id="cgpatxt" promptText="CGPA">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="updatecgpa" mnemonicParsing="false" onAction="#update" text="Update">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+               <children>
+                  <Button fx:id="viewresumebtn" mnemonicParsing="false" text="View Resume">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../css/button.css" />
+      <URL value="@../../css/textfield.css" />
+   </stylesheets>
+</AnchorPane>
