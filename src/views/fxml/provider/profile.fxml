@@ -20,10 +20,15 @@
             </Label>
          </children>
       </AnchorPane>
-      <VBox alignment="TOP_CENTER" layoutY="90.0" prefHeight="291.0" prefWidth="522.0" spacing="10.0">
+      <VBox alignment="TOP_CENTER" layoutY="89.0" prefHeight="296.0" prefWidth="522.0" spacing="10.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="290.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="513.0" spacing="45.0">
                <children>
+                  <Label prefWidth="100.0" text="Name">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="nametxt" text="Name">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -36,8 +41,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="513.0" spacing="45.0">
                <children>
+                  <Label prefWidth="100.0" text="Email">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="emailtxt" text="Email">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -50,8 +60,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="510.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="513.0" spacing="45.0">
                <children>
+                  <Label prefWidth="100.0" text="Organization">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="typetxt" text="Type">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -64,8 +79,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="513.0" spacing="45.0">
                <children>
+                  <Label prefWidth="100.0" text="Name">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="citytxt" text="City">
                      <font>
                         <Font name="Century Gothic" size="15.0" />

@@ -25,8 +25,13 @@
                   <Font name="Century Gothic" size="15.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Name">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="nametxt" text="Name">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -39,8 +44,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Email">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="emailtxt" text="Email">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -53,8 +63,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Contact">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="mobiletxt" text="Mobile">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -67,8 +82,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Location">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="citytxt" text="City">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -81,8 +101,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Date of birth">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="dobtxt" text="Date of birth">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -95,8 +120,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Gender">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="gendertxt" text="Gender">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -118,8 +148,13 @@
                   <Font name="Century Gothic" size="15.0" />
                </font>
             </Label>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="School">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="schooltxt" promptText="School name">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -132,8 +167,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="Stream">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="streamtxt" promptText="Stream">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -146,8 +186,13 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
+                  <Label prefWidth="100.0" text="CGPA">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
                   <TextField fx:id="cgpatxt" promptText="CGPA">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
@@ -160,7 +205,7 @@
                   </Button>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="70.0">
+            <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
                   <Button fx:id="viewresumebtn" mnemonicParsing="false" text="View Resume">
                      <font>
