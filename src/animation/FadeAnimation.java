@@ -5,7 +5,7 @@ import javafx.scene.Node;
 import javafx.util.Duration;
 
 public class FadeAnimation {
-	FadeTransition fd;
+	FadeTransition fd ;
 	
 	public void FadeOut(Node node) {
 		// TODO Auto-generated constructor stub
