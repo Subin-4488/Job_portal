@@ -3,4 +3,11 @@
 	-fx-background-color: transparent;
 	-fx-border-color: #1a237e;
 	-fx-border-radius: 8px;
+	-fx-font-size: 13px;
+	-fx-font-family: 'Century Gothic'
+}
+
+.combo-box-popup{
+	-fx-font-size: 13px;
+	-fx-font-family: 'Century Gothic';
 }

@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -40,8 +41,9 @@ public class SeekerDashboardController implements Initializable {
     private Button trackbtn;
 
     @FXML
-    void applyButtonAction(ActionEvent event) {
-    	
+    void applyButtonAction(ActionEvent event) throws IOException {
+    	rootpane.getChildren().clear();
+    	rootpane.getChildren().add((Node)FXMLLoader.load(getClass().getResource("/views/fxml/seeker/apply.fxml")));
     }
 
     @FXML

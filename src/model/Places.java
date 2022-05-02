@@ -8,7 +8,7 @@ public class Places {
 			"Palakkad",
 			"Thrissur",
 			"Ernakulam",
-			"Thriruvananthapuram",
+			"Thiruvananthapuram",
 			"Calicut",
 			"Kasargode",
 			"Kannur",

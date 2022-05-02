@@ -59,9 +59,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <ScrollPane layoutX="150.0" prefWidth="527.0">
+      <ScrollPane layoutX="150.0" prefHeight="486.0" prefWidth="522.0">
          <content>
-            <AnchorPane fx:id="rootpane" prefHeight="486.0" prefWidth="525.0">
+            <AnchorPane fx:id="rootpane" prefHeight="470.0" prefWidth="416.0">
                <children>
                   <ImageView fitHeight="196.0" fitWidth="628.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
                      <image>

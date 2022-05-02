@@ -47,7 +47,7 @@ public class JobPostController extends ProviderDashboardController implements In
     @FXML
     void jobPostAction(ActionEvent event) {
     	if (validate()) {
-    		new DBHandler().postJob(new Job(title, description, location, Float.parseFloat(salary), Integer.parseInt(experiencecombo.getValue()),ProviderDashboardController.id));
+    		new DBHandler().postJob(new Job(title, description, location, Float.parseFloat(salary), Integer.parseInt(experiencecombo.getValue()),ProviderDashboardController.id,null));
     	}
     }
     

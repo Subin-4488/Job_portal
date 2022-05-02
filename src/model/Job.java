@@ -7,27 +7,41 @@ public class Job {
 	String title="";
 	String description="";
 	String location="";
+	String company="";
 	float salary=0.0f;
 	int experience=0;
-	int cid=0;
 	
 	/**
 	 * @param title
 	 * @param description
 	 * @param location
+	 * @param company
 	 * @param salary
 	 * @param experience
 	 * @param cid
 	 */
-	public Job(String title, String description, String location, float salary, int experience, int cid) {
+	public Job(String title, String description, String location, float salary, int experience,int cid, String company) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.location = location;
+		this.company = company;
 		this.salary = salary;
 		this.experience = experience;
 		this.cid = cid;
 	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
+	}
+
+	int cid=0;
+	
+	
 
 	public String getTitle() {
 		return title;

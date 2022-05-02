@@ -22,7 +22,7 @@ public class DBHandler extends DBConfigs {
 			e.printStackTrace();
 		}
 		if (connection!=null) {
-			System.out.println("Connection established");
+			//System.out.println("Connection established");
 			return true;
 		}
 		else {
@@ -319,6 +319,45 @@ public class DBHandler extends DBConfigs {
 			}
 		}	
 		return curr_jobs;
+	}
+	
+	public ArrayList<Job> getPostJobs(String a,String filter){
+		ArrayList<Job> filter_job=new ArrayList<>();
+		
+		if (getConnection()) {
+			try {
+				String query="";
+				if(a==null && filter==null) {
+					query="select title,description,location,salary,id,cid from job";
+				}
+				else if (!a.equals("salary")) {
+					query="select title,description,location,salary,id,cid from job where "+a+"='"+filter+"'";
+				}
+				else {
+					query="select title,description,location,salary,id,cid from job order by salary desc";
+				}		
+				PreparedStatement pst=connection.prepareStatement(query);
+				ResultSet rs=pst.executeQuery();
+				
+				if (rs.next()) {
+					do {
+						Job job=new Job();
+						job.setTitle(rs.getString("title"));
+						job.setDescription(rs.getString("description"));
+						job.setLocation(rs.getString("location"));
+						job.setSalary(rs.getFloat("salary"));
+						job.setCid(rs.getInt("id"));   //here cid is id
+						job.setCompany(this.getProviderObject(rs.getInt("cid")).getName());
+						
+						filter_job.add(job);
+					} while (rs.next());
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}	
+		return filter_job;
 	}
 	
 	public void deleteJob(int id) {

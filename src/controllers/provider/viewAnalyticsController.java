@@ -51,8 +51,7 @@ public class viewAnalyticsController extends ProviderDashboardController {
     
     @FXML
     private Label salarylabel;
-    
-    private int idx;
+
 
     //job list
     @FXML
@@ -60,7 +59,6 @@ public class viewAnalyticsController extends ProviderDashboardController {
     	vbox.getChildren().clear();
     	ArrayList<Job> list=new DBHandler().getPostJobs(ProviderDashboardController.id);
     	for (int i=0;i<list.size();i++) {
-    		idx=i;
     		FXMLLoader loader=new FXMLLoader(getClass().getResource("/views/fxml/provider/listpostedjobs.fxml"));
         	loader.setController(this);
     		vbox.getChildren().add(loader.load());
