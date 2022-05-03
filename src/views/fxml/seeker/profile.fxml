@@ -207,7 +207,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                <children>
-                  <Button fx:id="viewresumebtn" mnemonicParsing="false" text="View Resume">
+                  <Button fx:id="viewresumebtn" mnemonicParsing="false" onAction="#viewResumeAction" text="View Resume">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>

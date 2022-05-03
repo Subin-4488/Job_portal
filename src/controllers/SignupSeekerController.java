@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.URL;
@@ -86,7 +87,7 @@ public class SignupSeekerController implements Initializable {
     
     
     File file=null;
-    FileInputStream fis=null;
+    InputStream fis=null;
 
     @FXML
     void resumeSelectAction(ActionEvent event) {

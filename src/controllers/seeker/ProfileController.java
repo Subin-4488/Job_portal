@@ -3,6 +3,7 @@ package controllers.seeker;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -12,14 +13,19 @@ import controllers.SeekerDashboardController;
 import database.DBHandler;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import model.JobSeeker;
 import model.Mail;
 import model.Places;
@@ -97,6 +103,8 @@ public class ProfileController extends SeekerDashboardController implements Init
     String dobString;
     String passString;
     String genderString;
+    
+    private Resume resume;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -114,7 +122,7 @@ public class ProfileController extends SeekerDashboardController implements Init
 		TextFields.bindAutoCompletion(citytxt, Places.placelist);
 		TextFields.bindAutoCompletion(emailtxt, Mail.emaillist);
 		
-		Resume resume=new DBHandler().getResumeObject(SeekerDashboardController.id);
+		resume=new DBHandler().getResumeObject(SeekerDashboardController.id);
 		schooltxt.setText(resume.getSchool());
 		streamtxt.setText(resume.getStream());
 		cgpatxt.setText(resume.getCgpa());
@@ -124,6 +132,16 @@ public class ProfileController extends SeekerDashboardController implements Init
 			//super.initialize(null, null);
 		}
 	}
+	
+	@FXML   
+    void viewResumeAction(ActionEvent event) throws IOException {
+		//viewresumebtn.getScene().getWindow()		
+		FXMLLoader loader=new FXMLLoader(getClass().getResource("/views/fxml/seeker/resume.fxml"));
+		Stage stage1=new Stage();
+		stage1.setScene(new Scene(loader.load()));
+		stage1.setTitle("Resume");
+		stage1.show();
+    }
 	
 	 @FXML
 	 void update(ActionEvent event) {

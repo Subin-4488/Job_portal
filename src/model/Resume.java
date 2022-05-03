@@ -1,10 +1,11 @@
 package model;
 
 import java.io.FileInputStream;
+import java.io.InputStream;
 
 public class Resume {
 	int id;
-	FileInputStream fs=null;
+	InputStream fs=null;
 	String school;
 	String stream;
 	String cgpa;
@@ -21,7 +22,7 @@ public class Resume {
 		return id;
 	}
 
-	public FileInputStream getFs() {
+	public InputStream getFs() {
 		return fs;
 	}
 
@@ -41,7 +42,7 @@ public class Resume {
 		this.id = id;
 	}
 
-	public void setFs(FileInputStream fs) {
+	public void setFs(InputStream fs) {
 		this.fs = fs;
 	}
 
@@ -64,7 +65,7 @@ public class Resume {
 	 * @param stream
 	 * @param cgpa
 	 */
-	public Resume(int id, FileInputStream fs, String school, String stream, String cgpa) {
+	public Resume(int id, InputStream fs, String school, String stream, String cgpa) {
 		super();
 		this.id = id;
 		this.fs = fs;

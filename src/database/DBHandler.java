@@ -233,7 +233,7 @@ public class DBHandler extends DBConfigs {
 		
 		if (getConnection()) {
 			try {
-				String query="select school,stream,cgpa from resume where id="+id;
+				String query="select school,stream,cgpa,file from resume where id="+id;
 				PreparedStatement pst=null;
 				pst=connection.prepareStatement(query);
 				ResultSet rSet=pst.executeQuery();
@@ -242,9 +242,9 @@ public class DBHandler extends DBConfigs {
 					resume.setSchool(rSet.getString("school"));
 					resume.setStream(rSet.getString("stream"));
 					resume.setCgpa(rSet.getString("cgpa"));
-					
+					resume.setFs(rSet.getBinaryStream("file"));
 				}
-			} catch (Exception e) {
+			} catch (Exception e) {	
 				e.printStackTrace();
 			}
 		}
