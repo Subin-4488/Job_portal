@@ -25,7 +25,6 @@ public class ResumeController extends ProfileController implements Initializable
 		try {
 			while ((ch=obj.getFs().read())!=-1) {
 				resumetxtflow.setText(resumetxtflow.getText()+(char)ch);
-				System.out.print(ch);
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

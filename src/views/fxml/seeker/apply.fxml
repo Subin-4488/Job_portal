@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.seeker.JobApplyController">
+
+<VBox alignment="TOP_CENTER" prefHeight="416.0" prefWidth="518.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.seeker.JobApplyController">
    <children>
-      <ComboBox fx:id="filterbycombo" layoutX="48.0" layoutY="27.0" onAction="#setFilter" prefHeight="33.0" prefWidth="194.0" promptText="Filter by" />
-      <ComboBox fx:id="filtercombo" layoutX="275.0" layoutY="27.0" onAction="#getFilterData" prefHeight="34.0" prefWidth="194.0" promptText="Choose" visible="false" />
-      <ScrollPane layoutX="1.0" layoutY="72.0">
-         <content>
-            <VBox fx:id="vbox" alignment="TOP_CENTER" prefHeight="416.0" prefWidth="518.0" />
-         </content>
-      </ScrollPane>
+      <HBox alignment="CENTER" spacing="35.0">
+         <children>
+            <ComboBox fx:id="filterbycombo" onAction="#setFilter" prefHeight="33.0" prefWidth="194.0" promptText="Filter by" />
+            <ComboBox fx:id="filtercombo" onAction="#getFilterData" prefHeight="34.0" prefWidth="194.0" promptText="Choose" visible="false" />
+         </children>
+      </HBox>
+      <VBox fx:id="vbox" prefHeight="374.0" prefWidth="509.0" />
    </children>
-   <stylesheets>
-      <URL value="@../../css/combobox.css" />
-      <URL value="@../../css/button.css" />
-      <URL value="@../../css/textfield.css" />
-   </stylesheets>
-</AnchorPane>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>

@@ -2,10 +2,13 @@ package controllers.seeker;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 import animation.FadeAnimation;
+import controllers.SeekerDashboardController;
 import database.DBHandler;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,10 +23,11 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
+import model.Applied;
 import model.Job;
 import model.Places;
 
-public class JobApplyController implements Initializable {
+public class JobApplyController extends SeekerDashboardController implements Initializable {
 
     @FXML
     private ComboBox<String> filterbycombo;
@@ -127,20 +131,22 @@ public class JobApplyController implements Initializable {
     		descriptiontextarea.setText(list.get(i).getDescription());
     		locationlabel.setText(list.get(i).getLocation());
     		salarylabel.setText(Float.toString(list.get(i).getSalary()));
-    		idlabel.setText(Integer.toString(list.get(i).getCid()));
-    		companylabel.setText(list.get(i).getCompany());
-    		applybtn.setOnAction(applyButtonAction(new ActionEvent(), Integer.parseInt(idlabel.getText())));
+    		idlabel.setText(Integer.toString(list.get(i).getId()));
+    		companylabel.setText(new DBHandler().getProviderObject(list.get(i).getCid()).getName());
+    		
+    		applybtn.setOnAction(applyButtonAction(new ActionEvent(), list.get(i).getId(),list.get(i).getCid()));
     	}
     	new FadeAnimation().FadeIn(vbox);
     }
     
-    EventHandler<ActionEvent> applyButtonAction(ActionEvent event,int id){
+    EventHandler<ActionEvent> applyButtonAction(ActionEvent event,int jid,int cid){
 		return new EventHandler<ActionEvent>() {
 			
 			@Override
 			public void handle(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				
+				Applied applied=new Applied(SeekerDashboardController.id,cid,jid,"Applied",java.sql.Date.valueOf(LocalDate.now()));
+				new DBHandler().applyForJob(applied);
 			}
 		};
     	

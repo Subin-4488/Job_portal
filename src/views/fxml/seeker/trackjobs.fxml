@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="270.0" prefWidth="515.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="507.0" spacing="5.0">
+         <children>
+            <Label fx:id="titlelabel" prefHeight="26.0" prefWidth="399.0" text="Title">
+               <font>
+                  <Font name="Century Gothic Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="18.0" prefWidth="53.0" text="JOB ID:">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="idlabel" prefHeight="26.0" prefWidth="34.0" text="ID">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <TextArea fx:id="descriptiontextarea" editable="false" layoutX="39.0" layoutY="44.0" prefHeight="97.0" prefWidth="458.0" text="description" wrapText="true">
+         <font>
+            <Font name="Century Gothic Italic" size="13.0" />
+         </font>
+      </TextArea>
+      <HBox layoutX="40.0" layoutY="156.0" prefHeight="38.0" prefWidth="267.0" spacing="7.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="65.0" text="Salary:">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="salarylabel" prefHeight="16.0" prefWidth="170.0" text="Salary">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="40.00000190734863" layoutY="176.7999973297119" spacing="7.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="65.0" text="Location:">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="locationlabel" prefHeight="16.0" prefWidth="174.0" text="location">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="198.0" prefHeight="37.0" prefWidth="267.0" spacing="7.0">
+         <children>
+            <Label prefWidth="65.0" text="Company">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="companylabel" prefHeight="16.0" prefWidth="174.0" text="company">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Separator layoutX="14.0" layoutY="248.0" prefHeight="24.0" prefWidth="488.0">
+         <effect>
+            <Shadow height="0.0" radius="0.0" width="0.0">
+               <color>
+                  <Color red="0.12941177189350128" green="0.08627451211214066" blue="0.8705882430076599" />
+               </color>
+            </Shadow>
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </Separator>
+      <Label layoutX="315.0" layoutY="185.0" text="Status:">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="statuslabel" layoutX="386.0" layoutY="185.0" prefHeight="26.0" prefWidth="122.0" text="Status" textFill="RED">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

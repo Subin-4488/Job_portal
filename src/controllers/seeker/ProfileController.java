@@ -135,12 +135,12 @@ public class ProfileController extends SeekerDashboardController implements Init
 	
 	@FXML   
     void viewResumeAction(ActionEvent event) throws IOException {
-		//viewresumebtn.getScene().getWindow()		
+		//profilePane.setDisable(true);
 		FXMLLoader loader=new FXMLLoader(getClass().getResource("/views/fxml/seeker/resume.fxml"));
 		Stage stage1=new Stage();
 		stage1.setScene(new Scene(loader.load()));
 		stage1.setTitle("Resume");
-		stage1.show();
+		stage1.showAndWait();
     }
 	
 	 @FXML

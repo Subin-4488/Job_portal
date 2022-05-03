@@ -63,7 +63,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </RadioButton>
-      <Button fx:id="loginbtn" layoutX="101.0" layoutY="383.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="30.0" prefWidth="298.0" text="login">
+      <Button fx:id="loginbtn" layoutX="101.0" layoutY="383.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="38.0" prefWidth="298.0" text="Login">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>

@@ -3,6 +3,7 @@ import java.io.FileInputStream;
 import java.sql.*;
 import java.util.ArrayList;
 
+import model.Applied;
 import model.Job;
 import model.JobProvider;
 import model.JobSeeker;
@@ -292,35 +293,6 @@ public class DBHandler extends DBConfigs {
 		}
 	}
 	
-	public ArrayList<Job> getPostJobs(int id){
-		ArrayList<Job> curr_jobs=new ArrayList<>();
-		
-		if (getConnection()) {
-			try {
-				String query="select title,description,location,salary,id from job where cid="+id;
-				PreparedStatement pst=connection.prepareStatement(query);
-				ResultSet rs=pst.executeQuery();
-				
-				if (rs.next()) {
-					do {
-						Job job=new Job();
-						job.setTitle(rs.getString("title"));
-						job.setDescription(rs.getString("description"));
-						job.setLocation(rs.getString("location"));
-						job.setSalary(rs.getFloat("salary"));
-						job.setCid(rs.getInt("id"));   //here cid is id
-						
-						curr_jobs.add(job);
-					} while (rs.next());
-				}
-				
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}	
-		return curr_jobs;
-	}
-	
 	public ArrayList<Job> getPostJobs(String a,String filter){
 		ArrayList<Job> filter_job=new ArrayList<>();
 		
@@ -346,9 +318,8 @@ public class DBHandler extends DBConfigs {
 						job.setDescription(rs.getString("description"));
 						job.setLocation(rs.getString("location"));
 						job.setSalary(rs.getFloat("salary"));
-						job.setCid(rs.getInt("id"));   //here cid is id
-						job.setCompany(this.getProviderObject(rs.getInt("cid")).getName());
-						
+						job.setId(rs.getInt("id"));   
+						job.setCid(rs.getInt("cid"));
 						filter_job.add(job);
 					} while (rs.next());
 				}
@@ -371,5 +342,44 @@ public class DBHandler extends DBConfigs {
 				new AlertClass("Failed", 'E');
 			}
 		}
+	}
+	
+	public void applyForJob(Applied applied) {
+		if (getConnection()) {
+			try {
+				String query="insert into applied(seekerid,providerid,jobid,status,date) values(?,?,?,?,?)";
+				PreparedStatement pst=connection.prepareStatement(query);
+				pst.setInt(1, applied.getSeekerid());
+				pst.setInt(2, applied.getProviderid());
+				pst.setInt(3, applied.getJobid());
+				pst.setString(4, applied.getStatus());
+				pst.setDate(5,applied.getDate());
+				
+				pst.executeUpdate();
+				new AlertClass("Applied Successfully", 'C');
+			} catch (Exception e) {	
+				e.printStackTrace();
+				new AlertClass("Failed!!", 'E');
+			}
+		}
+	}
+	
+	public ArrayList<Applied> getAppliedJobs(int seekerid){
+		ArrayList<Applied> list=new ArrayList<>();
+		if (getConnection()) {
+			try {
+				String query="select providerid,jobid,status,date from applied where seekerid="+seekerid;
+				PreparedStatement pst=connection.prepareStatement(query);
+				
+				ResultSet rs=pst.executeQuery();
+				
+				while (rs.next()) {
+					list.add(new Applied(seekerid, rs.getInt("providerid"), rs.getInt("jobid"), rs.getString("status"), rs.getDate("date")));
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}		
+		}
+		return list;
 	}
 }

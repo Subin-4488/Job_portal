@@ -44,6 +44,7 @@ public class SeekerDashboardController implements Initializable {
     void applyButtonAction(ActionEvent event) throws IOException {
     	rootpane.getChildren().clear();
     	rootpane.getChildren().add((Node)FXMLLoader.load(getClass().getResource("/views/fxml/seeker/apply.fxml")));
+    	new FadeAnimation().FadeIn(rootpane);
     }
 
     @FXML
@@ -65,8 +66,10 @@ public class SeekerDashboardController implements Initializable {
     }
 
     @FXML
-    void trackButtonAction(ActionEvent event) {
-
+    void trackButtonAction(ActionEvent event) throws IOException {
+    	rootpane.getChildren().clear();
+    	rootpane.getChildren().add(FXMLLoader.load(getClass().getResource("/views/fxml/seeker/track.fxml")));
+    	new FadeAnimation().FadeIn(rootpane);
     }
 
 	@Override

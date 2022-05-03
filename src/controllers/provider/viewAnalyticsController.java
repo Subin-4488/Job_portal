@@ -57,7 +57,7 @@ public class viewAnalyticsController extends ProviderDashboardController {
     @FXML
     void listJobsPosted(ActionEvent event) throws IOException {
     	vbox.getChildren().clear();
-    	ArrayList<Job> list=new DBHandler().getPostJobs(ProviderDashboardController.id);
+    	ArrayList<Job> list=new DBHandler().getPostJobs("cid",Integer.toString(ProviderDashboardController.id));
     	for (int i=0;i<list.size();i++) {
     		FXMLLoader loader=new FXMLLoader(getClass().getResource("/views/fxml/provider/listpostedjobs.fxml"));
         	loader.setController(this);
@@ -66,7 +66,7 @@ public class viewAnalyticsController extends ProviderDashboardController {
     		descriptiontextarea.setText(list.get(i).getDescription());
     		locationlabel.setText(list.get(i).getLocation());
     		salarylabel.setText(Float.toString(list.get(i).getSalary()));
-    		idlabel.setText(Integer.toString(list.get(i).getCid()));
+    		idlabel.setText(Integer.toString(list.get(i).getId()));
     		deletebtn.setOnAction(deleteJobAction(event,idlabel.getText()));
     	}
     	new FadeAnimation().FadeIn(vbox);
