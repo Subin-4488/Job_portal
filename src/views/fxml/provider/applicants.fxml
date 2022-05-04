@@ -11,7 +11,6 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox fx:id="vboxinner" alignment="TOP_CENTER" prefHeight="220.0" prefWidth="507.0" spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" spacing="5.0">
@@ -75,7 +74,7 @@
             </Label>
          </children>
       </HBox>
-      <Button fx:id="viewapplicantsbtn" mnemonicParsing="false" prefHeight="27.0" prefWidth="151.0" stylesheets="@../../css/button.css" text="view applicants: ">
+      <Button fx:id="viewapplicantsbtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="146.0" stylesheets="@../../css/button.css" text="View Applicants">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>

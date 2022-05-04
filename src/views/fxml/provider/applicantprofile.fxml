@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,178 +12,174 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<ScrollPane prefHeight="529.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.provider.ApplicantProfileShowController">
+<ScrollPane prefHeight="502.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.provider.ApplicantProfileShowController">
    <content>
-      <AnchorPane>
+      <AnchorPane fx:id="profilePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1018.0" prefWidth="530.0">
          <children>
-            <AnchorPane fx:id="profilePane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="522.0">
+            <VBox alignment="CENTER" layoutX="-10.0" layoutY="-5.0" prefHeight="510.0" prefWidth="527.0" spacing="10.0">
                <children>
-                  <VBox alignment="CENTER" layoutX="-5.0" layoutY="-5.0" prefHeight="509.0" prefWidth="522.0" spacing="10.0">
+                  <ImageView fx:id="avatar" fitHeight="121.0" fitWidth="117.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../assets/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Personal Data" underline="true">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                      <children>
-                        <ImageView fx:id="avatar" fitHeight="121.0" fitWidth="117.0" pickOnBounds="true">
-                           <image>
-                              <Image url="@../../../assets/avatar.png" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Personal Data" underline="true">
+                        <Label prefWidth="100.0" text="Name">
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Name">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="nametxt" editable="false" text="Name">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Email">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="emailtxt" editable="false" text="Email">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Contact">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="mobiletxt" editable="false" text="Mobile">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Location">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="citytxt" editable="false" text="City">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Date of birth">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="dobtxt" editable="false" text="Date of birth">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Gender">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="gendertxt" editable="false" text="Gender">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
+                        <TextField fx:id="nametxt" editable="false" text="Name">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
                      </children>
-                  </VBox>
-                  <VBox alignment="CENTER" layoutY="505.0" prefHeight="269.0" prefWidth="522.0" spacing="10.0">
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Academics" underline="true">
+                        <Label prefWidth="100.0" text="Email">
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
                         </Label>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="School">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="schooltxt" editable="false" promptText="School name">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="Stream">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="streamtxt" editable="false" promptText="Stream">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Label prefWidth="100.0" text="CGPA">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="cgpatxt" editable="false" promptText="CGPA">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
-                           <children>
-                              <Button fx:id="viewresumebtn" mnemonicParsing="false" onAction="#viewResumeAction" text="View Resume">
-                                 <font>
-                                    <Font name="Century Gothic" size="15.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </HBox>
+                        <TextField fx:id="emailtxt" editable="false" text="Email">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Contact">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="mobiletxt" editable="false" text="Mobile">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Location">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="citytxt" editable="false" text="City">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Date of birth">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dobtxt" editable="false" text="Date of birth">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Gender">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="gendertxt" editable="false" text="Gender">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
                </children>
-               <stylesheets>
-                  <URL value="@../../css/button.css" />
-                  <URL value="@../../css/textfield.css" />
-               </stylesheets>
-            </AnchorPane>
+            </VBox>
+            <VBox alignment="CENTER" layoutY="497.0" prefHeight="166.0" prefWidth="522.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="19.0" prefWidth="127.0" text="Academics" underline="true">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="School">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="schooltxt" editable="false" promptText="School name">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="Stream">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="streamtxt" editable="false" promptText="Stream">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="38.0" prefWidth="522.0" spacing="40.0">
+                     <children>
+                        <Label prefWidth="100.0" text="CGPA">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="cgpatxt" editable="false" promptText="CGPA">
+                           <font>
+                              <Font name="Century Gothic" size="15.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="102.0" prefWidth="522.0" spacing="40.0" />
+               </children>
+            </VBox>
+            <TextArea fx:id="resumetxtarea" editable="false" layoutY="709.0" prefHeight="308.0" prefWidth="534.0">
+               <font>
+                  <Font name="Century Gothic Italic" size="15.0" />
+               </font></TextArea>
+            <Label alignment="CENTER" layoutX="201.0" layoutY="681.0" prefHeight="19.0" prefWidth="127.0" text="Resume" underline="true">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
          </children>
+         <stylesheets>
+            <URL value="@../../css/button.css" />
+            <URL value="@../../css/textfield.css" />
+         </stylesheets>
       </AnchorPane>
    </content>
 </ScrollPane>

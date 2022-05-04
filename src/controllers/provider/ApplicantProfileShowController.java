@@ -1,5 +1,6 @@
 package controllers.provider;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -7,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -52,6 +54,10 @@ public class ApplicantProfileShowController implements Initializable {
     @FXML
     private Button viewresumebtn;
     
+    @FXML
+    private TextArea resumetxtarea;
+
+    
     private JobSeeker seekerobj;
     private Resume resumeobj;
 
@@ -76,6 +82,18 @@ public class ApplicantProfileShowController implements Initializable {
 		schooltxt.setText(resumeobj.getSchool());
 		streamtxt.setText(resumeobj.getStream());
 		cgpatxt.setText(resumeobj.getCgpa());
+		
+		int ch;
+		String resume="";
+		try {
+			while ((ch=resumeobj.getFs().read())!=-1) {
+				resume+=(char)ch;
+			}
+			resumetxtarea.setText(resume);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		}
 	}
 	

@@ -5,8 +5,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import org.controlsfx.control.textfield.TextFields;
+
 import controllers.ProviderDashboardController;
 import database.DBHandler;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -24,6 +28,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.Applied;
 import model.JobSeeker;
+import model.Mail;
 import model.Resume;
 import javafx.fxml.Initializable;
 
@@ -74,6 +79,9 @@ public class ApplicantSelectController extends viewAnalyticsController implement
     private Button viewresumebtn;
     
     @FXML
+    private TextField statustxtfield;
+    
+    @FXML
     private Label datelabel;
 
     @FXML
@@ -84,6 +92,8 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 
     @FXML
     private Button viewprofilebtn;
+    
+    private static ObservableList<String> statuslist=FXCollections.observableArrayList("SHORTLISTED","REJECTED","ACCEPTED");;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -102,8 +112,10 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 						
 						namelabel.setText(seekerobj.getName());
 						datelabel.setText(appliedlist.get(i).getDate().toString());
+						TextFields.bindAutoCompletion(statustxtfield,ApplicantSelectController.statuslist);
 						viewprofilebtn.setOnAction(viewProfileAction(seekerobj,resumeobj));
 						updatestatusbtn.setOnAction(updateStatusAction());
+						statustxtfield.setVisible(false);
 						
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
@@ -119,7 +131,8 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 			@Override
 			public void handle(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				
+				statustxtfield.setVisible(true);
+				statustxtfield.setPromptText("Enter the status");
 			}
 			
 		};
