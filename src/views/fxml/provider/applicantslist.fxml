@@ -10,34 +10,34 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="227.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="28.0" layoutY="24.0" prefHeight="19.0" prefWidth="95.0" text="Name">
+      <Label layoutX="48.0" layoutY="34.0" prefHeight="19.0" prefWidth="95.0" text="Name">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="namelabel" layoutX="174.0" layoutY="24.0" prefHeight="19.0" prefWidth="156.0" text="Name">
+      <Label fx:id="namelabel" layoutX="194.0" layoutY="34.0" prefHeight="19.0" prefWidth="156.0" text="Name">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="57.0" prefHeight="19.0" prefWidth="95.0" text="Applied on">
+      <Label layoutX="48.0" layoutY="67.0" prefHeight="19.0" prefWidth="95.0" text="Applied on">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="datelabel" layoutX="174.0" layoutY="57.0" prefHeight="19.0" prefWidth="156.0" text="Date">
+      <Label fx:id="datelabel" layoutX="194.0" layoutY="67.0" prefHeight="19.0" prefWidth="156.0" text="Date">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </Label>
-      <Button fx:id="viewprofilebtn" layoutX="184.0" layoutY="88.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="View Profile">
+      <Button fx:id="viewprofilebtn" layoutX="194.0" layoutY="102.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="View Profile">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
       </Button>
-      <Separator layoutX="14.0" layoutY="194.0" prefHeight="0.0" prefWidth="487.0">
+      <Separator layoutX="11.0" layoutY="204.0" prefHeight="0.0" prefWidth="487.0">
          <effect>
             <DropShadow blurType="GAUSSIAN">
                <color>
@@ -46,16 +46,16 @@
             </DropShadow>
          </effect>
       </Separator>
-      <TextField fx:id="statustxtfield" editable="false" layoutX="28.0" layoutY="143.0" prefHeight="30.0" prefWidth="128.0" promptText="Enter status">
-         <font>
-            <Font name="Century Gothic" size="15.0" />
-         </font>
-      </TextField>
-      <Button fx:id="updatestatusbtn" layoutX="184.0" layoutY="140.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="Update Status">
+      <Button fx:id="updatestatusbtn" layoutX="194.0" layoutY="145.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="Update Status">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
       </Button>
+      <TextField fx:id="statustxt" layoutX="48.0" layoutY="148.0" prefHeight="30.0" prefWidth="126.0" promptText="Enter status">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </TextField>
    </children>
    <stylesheets>
       <URL value="@../../css/button.css" />

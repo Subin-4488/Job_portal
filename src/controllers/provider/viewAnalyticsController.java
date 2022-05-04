@@ -126,7 +126,7 @@ public class viewAnalyticsController extends ProviderDashboardController {
 				
 				int count=0;
 				count=new DBHandler().applicantCount(joblist.get(i).getId(), ProviderDashboardController.id);
-				viewapplicantsbtn.setText("view applicants: "+count);
+				viewapplicantsbtn.setText("View Applicants: "+count);
 				viewapplicantsbtn.setOnAction(viewApplicants(count,joblist.get(i).getCid(),joblist.get(i).getId()));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

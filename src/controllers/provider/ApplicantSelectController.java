@@ -22,6 +22,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
@@ -79,10 +80,10 @@ public class ApplicantSelectController extends viewAnalyticsController implement
     private Button viewresumebtn;
     
     @FXML
-    private TextField statustxtfield;
+    private Label datelabel;
     
     @FXML
-    private Label datelabel;
+    private TextField statustxt;
 
     @FXML
     private Label namelabel;
@@ -93,7 +94,7 @@ public class ApplicantSelectController extends viewAnalyticsController implement
     @FXML
     private Button viewprofilebtn;
     
-    private static ObservableList<String> statuslist=FXCollections.observableArrayList("SHORTLISTED","REJECTED","ACCEPTED");;
+    private static ObservableList<String> statuslist=FXCollections.observableArrayList("SHORTLISTED","REJECTED","ACCEPTED");
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -112,11 +113,10 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 						
 						namelabel.setText(seekerobj.getName());
 						datelabel.setText(appliedlist.get(i).getDate().toString());
-						TextFields.bindAutoCompletion(statustxtfield,ApplicantSelectController.statuslist);
 						viewprofilebtn.setOnAction(viewProfileAction(seekerobj,resumeobj));
 						updatestatusbtn.setOnAction(updateStatusAction());
-						statustxtfield.setVisible(false);
-						
+						statustxt.setOnKeyPressed(getStatusAction((appliedlist.get(i).getSeekerid())));
+						TextFields.bindAutoCompletion(statustxt,ApplicantSelectController.statuslist);
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -131,10 +131,19 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 			@Override
 			public void handle(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-				statustxtfield.setVisible(true);
-				statustxtfield.setPromptText("Enter the status");
+			
 			}
 			
+		};
+	}
+	
+	private EventHandler<KeyEvent> getStatusAction(int sid){
+		return new EventHandler<KeyEvent>() {
+			@Override
+			public void handle(KeyEvent arg0) {
+				System.out.println(sid+": "+arg0.getText());
+				
+			}	
 		};
 	}
 	
