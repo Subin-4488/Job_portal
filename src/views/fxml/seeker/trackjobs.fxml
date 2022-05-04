@@ -41,7 +41,7 @@
       </TextArea>
       <HBox layoutX="40.0" layoutY="156.0" prefHeight="38.0" prefWidth="267.0" spacing="7.0">
          <children>
-            <Label prefHeight="16.0" prefWidth="65.0" text="Salary:">
+            <Label prefHeight="16.0" prefWidth="122.0" text="Salary:">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>
@@ -58,7 +58,7 @@
       </HBox>
       <HBox layoutX="40.00000190734863" layoutY="176.7999973297119" spacing="7.0">
          <children>
-            <Label prefHeight="16.0" prefWidth="65.0" text="Location:">
+            <Label prefHeight="16.0" prefWidth="96.0" text="Location:">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>
@@ -75,7 +75,7 @@
       </HBox>
       <HBox layoutX="40.0" layoutY="198.0" prefHeight="37.0" prefWidth="267.0" spacing="7.0">
          <children>
-            <Label prefWidth="65.0" text="Company">
+            <Label prefWidth="122.0" text="Company">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>
@@ -112,5 +112,22 @@
             <Font name="Century Gothic Bold" size="20.0" />
          </font>
       </Label>
+      <HBox layoutX="40.0" layoutY="217.0" prefHeight="37.0" prefWidth="267.0" spacing="7.0">
+         <children>
+            <Label prefHeight="16.0" prefWidth="122.0" text="Date applied:">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="datelabel" prefHeight="16.0" prefWidth="174.0" text="date">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
+         </padding>
+      </HBox>
    </children>
 </AnchorPane>

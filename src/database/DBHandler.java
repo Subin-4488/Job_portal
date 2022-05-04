@@ -364,22 +364,56 @@ public class DBHandler extends DBConfigs {
 		}
 	}
 	
-	public ArrayList<Applied> getAppliedJobs(int seekerid){
+	public ArrayList<Applied> getAppliedJobs(int id,char c,int jid){  //c=='S' for seeker  and 'P' for provider
 		ArrayList<Applied> list=new ArrayList<>();
 		if (getConnection()) {
 			try {
-				String query="select providerid,jobid,status,date from applied where seekerid="+seekerid;
-				PreparedStatement pst=connection.prepareStatement(query);
-				
-				ResultSet rs=pst.executeQuery();
-				
-				while (rs.next()) {
-					list.add(new Applied(seekerid, rs.getInt("providerid"), rs.getInt("jobid"), rs.getString("status"), rs.getDate("date")));
+				PreparedStatement pst;
+				String query;
+				ResultSet rs;
+				if (c=='S') {
+					query="select providerid,jobid,status,date from applied where seekerid="+id;
+					pst=connection.prepareStatement(query);
+					rs=pst.executeQuery();
+					while (rs.next()) {
+						list.add(new Applied(id, rs.getInt("providerid"), rs.getInt("jobid"), rs.getString("status"), rs.getDate("date")));
+					}
 				}
+				else {
+					query="select seekerid,status,date from applied where providerid=? and jobid=?";
+					pst=connection.prepareStatement(query);
+					pst.setString(1, Integer.toString(id));
+					pst.setString(2, Integer.toString(jid));
+					rs=pst.executeQuery();
+					while (rs.next()) {
+						list.add(new Applied(rs.getInt("seekerid"), id, jid, rs.getString("status"), rs.getDate("date")));
+					}
+				}
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}		
 		}
 		return list;
 	}
+	
+	public int applicantCount(int jid,int pid) {
+		int ret=0;
+		if (getConnection()) {
+			try {
+				String query="select count(distinct seekerid) from applied where jobid=? and providerid=?";
+				PreparedStatement pst=connection.prepareStatement(query);
+				
+				pst.setString(1, Integer.toString(jid));
+				pst.setString(2, Integer.toString(pid));
+				ResultSet rs=pst.executeQuery();
+				if (rs.next())
+					ret=rs.getInt(1);
+			} catch (Exception e) {
+				
+			}
+		}
+		return ret;
+	}
+	
 }

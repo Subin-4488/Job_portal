@@ -32,6 +32,9 @@ public class TrackController extends SeekerDashboardController implements Initia
 
 	    @FXML
 	    private Label locationlabel;
+	    
+	    @FXML
+	    private Label datelabel;
 
 	    @FXML
 	    private Label salarylabel;
@@ -50,7 +53,7 @@ public class TrackController extends SeekerDashboardController implements Initia
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		if (!flag) {
 			flag=true;
-			ArrayList<Applied> list=new DBHandler().getAppliedJobs(SeekerDashboardController.id);
+			ArrayList<Applied> list=new DBHandler().getAppliedJobs(SeekerDashboardController.id,'S',-1);
 			JobProvider provider;
 			Job job;
 			
@@ -72,6 +75,7 @@ public class TrackController extends SeekerDashboardController implements Initia
 					locationlabel.setText(job.getLocation());
 					companylabel.setText(provider.getName());
 					statuslabel.setText(list.get(i).getStatus());
+					datelabel.setText(list.get(i).getDate().toString());
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
