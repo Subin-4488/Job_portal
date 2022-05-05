@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
@@ -74,13 +76,20 @@
             </Label>
          </children>
       </HBox>
-      <Button fx:id="viewapplicantsbtn" mnemonicParsing="false" prefHeight="35.0" prefWidth="146.0" stylesheets="@../../css/button.css" text="View Applicants">
+      <Button fx:id="viewapplicantsbtn" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" stylesheets="@../../css/button.css" text="View Applicants">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
          <VBox.margin>
-            <Insets left="330.0" />
+            <Insets left="300.0" />
          </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/track.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Separator prefHeight="11.0" prefWidth="507.0">
          <effect>

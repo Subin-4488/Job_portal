@@ -22,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import model.Applied;
 import model.Job;
@@ -37,6 +38,9 @@ public class JobApplyController extends SeekerDashboardController implements Ini
 
     @FXML
     private VBox vbox;
+    
+    @FXML
+    private ImageView imgcombo;
     
     @FXML
     private Button applybtn;
@@ -94,16 +98,19 @@ public class JobApplyController extends SeekerDashboardController implements Ini
     	String filtertype=filterbycombo.getValue();
     	
     	if (filtertype.equals("title")) {
+    		imgcombo.setVisible(true);
     		filtercombo.setVisible(true);
     		filtercombo.setValue("Choose title");
 			filtercombo.setItems(titlefilterlist);
     	}
     	else if(filtertype.equals("location")) {
+    		imgcombo.setVisible(true);
     		filtercombo.setVisible(true);
 			filtercombo.setValue("Choose location");
 			filtercombo.setItems(locationfilterlist);
     	}
     	else if(filtertype.equals("Salary(High to low)")) {
+    		imgcombo.setVisible(false);
     		filtercombo.setVisible(false);
     		listFilteredJobs("salary",null);
     	}

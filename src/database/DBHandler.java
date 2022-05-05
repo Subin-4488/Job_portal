@@ -416,4 +416,24 @@ public class DBHandler extends DBConfigs {
 		return ret;
 	}
 	
+	public void updateApplicantStatus(String status,int seekerid,int jobid) {
+		if (getConnection()) {
+			try {
+				String query="update applied set status=? where seekerid=? and jobid=?";
+				PreparedStatement pst=connection.prepareStatement(query);
+				pst.setString(1, status);
+				pst.setInt(2, seekerid);
+				pst.setInt(3, jobid);
+				
+				pst.executeUpdate();
+				new AlertClass("Status posted successfully", 'C');
+				
+			} catch (Exception e) {
+				// TODO: handle exception
+				new AlertClass("Status not posted", 'E');
+				e.printStackTrace();
+			}
+		}
+	}
+	
 }

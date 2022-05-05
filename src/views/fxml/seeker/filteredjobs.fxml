@@ -6,18 +6,20 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="270.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="302.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" spacing="5.0">
          <children>
             <Label fx:id="titlelabel" prefHeight="26.0" prefWidth="399.0" text="Title">
                <font>
-                  <Font name="Century Gothic Bold" size="20.0" />
+                  <Font name="Century Gothic Bold" size="17.0" />
                </font>
             </Label>
             <Label prefHeight="18.0" prefWidth="53.0" text="JOB ID:">
@@ -91,12 +93,19 @@
             <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
          </padding>
       </HBox>
-      <Button fx:id="applybtn" layoutX="403.20000648498535" layoutY="218.40000343322754" mnemonicParsing="false" prefHeight="21.0" prefWidth="70.0" stylesheets="@../../css/button.css" text="Apply">
+      <Button fx:id="applybtn" layoutX="385.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" stylesheets="@../../css/button.css" text="Apply">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/apply.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Separator layoutY="250.39998817443848" prefHeight="11.0" prefWidth="507.0">
+      <Separator layoutX="4.0" layoutY="269.0" prefHeight="11.0" prefWidth="507.0">
          <effect>
             <Shadow height="0.0" radius="0.0" width="0.0">
                <color>

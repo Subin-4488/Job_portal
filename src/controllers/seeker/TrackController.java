@@ -35,6 +35,9 @@ public class TrackController extends SeekerDashboardController implements Initia
 	    
 	    @FXML
 	    private Label datelabel;
+	    
+	    @FXML
+	    private Label message;
 
 	    @FXML
 	    private Label salarylabel;
@@ -76,6 +79,10 @@ public class TrackController extends SeekerDashboardController implements Initia
 					companylabel.setText(provider.getName());
 					statuslabel.setText(list.get(i).getStatus());
 					datelabel.setText(list.get(i).getDate().toString());
+					
+					if (statuslabel.getText().equals("ACCEPTED")||statuslabel.getText().equals("SHORTLISTED"))
+						message.setVisible(true);
+					
 					
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

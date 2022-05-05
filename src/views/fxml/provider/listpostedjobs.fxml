@@ -6,18 +6,20 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="vboxinner" alignment="CENTER" prefHeight="219.0" prefWidth="507.0" spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="vboxinner" alignment="CENTER" prefHeight="262.0" prefWidth="507.0" spacing="5.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER_LEFT" spacing="5.0">
          <children>
             <Label fx:id="titlelabel" prefHeight="26.0" prefWidth="399.0" text="Title">
                <font>
-                  <Font name="Century Gothic Bold" size="20.0" />
+                  <Font name="Century Gothic Bold" size="17.0" />
                </font>
             </Label>
             <Label prefHeight="18.0" prefWidth="53.0" text="JOB ID:">
@@ -74,13 +76,20 @@
             </Label>
          </children>
       </HBox>
-      <Button fx:id="deletebtn" mnemonicParsing="false" prefHeight="21.0" prefWidth="70.0" stylesheets="@../../css/button.css" text="Delete">
+      <Button fx:id="deletebtn" mnemonicParsing="false" prefHeight="30.0" prefWidth="122.0" stylesheets="@../../css/button.css" text="Delete Job">
          <font>
             <Font name="Century Gothic" size="13.0" />
          </font>
          <VBox.margin>
-            <Insets left="400.0" />
+            <Insets left="350.0" />
          </VBox.margin>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/back.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Separator prefHeight="11.0" prefWidth="507.0">
          <effect>
@@ -90,6 +99,9 @@
                </color>
             </Shadow>
          </effect>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
       </Separator>
    </children>
    <padding>

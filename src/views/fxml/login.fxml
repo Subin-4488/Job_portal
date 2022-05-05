@@ -10,6 +10,8 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
@@ -83,6 +85,13 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Button fx:id="providerbtn" layoutX="477.0" layoutY="296.0" mnemonicParsing="false" onAction="#signupProviderAction" prefHeight="30.0" prefWidth="178.0" text="JOB PROVIDER">
          <font>
@@ -91,6 +100,13 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Separator layoutX="433.0" layoutY="121.0" orientation="VERTICAL" prefHeight="378.0" prefWidth="14.0">
          <effect>
@@ -101,6 +117,31 @@
             </DropShadow>
          </effect>
       </Separator>
+      <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="176.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="494.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/signup.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="29.0" layoutX="64.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="30.0" layoutX="64.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="19.0" fitWidth="29.0" layoutX="207.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/login.png" />
+         </image>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@../css/button.css" />

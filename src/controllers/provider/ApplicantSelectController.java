@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -81,9 +82,6 @@ public class ApplicantSelectController extends viewAnalyticsController implement
     
     @FXML
     private Label datelabel;
-    
-    @FXML
-    private TextField statustxt;
 
     @FXML
     private Label namelabel;
@@ -93,6 +91,8 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 
     @FXML
     private Button viewprofilebtn;
+    
+    private static String statusString=""; 
     
     private static ObservableList<String> statuslist=FXCollections.observableArrayList("SHORTLISTED","REJECTED","ACCEPTED");
 
@@ -114,9 +114,7 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 						namelabel.setText(seekerobj.getName());
 						datelabel.setText(appliedlist.get(i).getDate().toString());
 						viewprofilebtn.setOnAction(viewProfileAction(seekerobj,resumeobj));
-						updatestatusbtn.setOnAction(updateStatusAction());
-						statustxt.setOnKeyPressed(getStatusAction((appliedlist.get(i).getSeekerid())));
-						TextFields.bindAutoCompletion(statustxt,ApplicantSelectController.statuslist);
+						updatestatusbtn.setOnAction(updateStatusAction(appliedlist.get(i).getSeekerid(),seekerobj.getName(),appliedlist.get(i).getJobid()));
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
@@ -125,25 +123,20 @@ public class ApplicantSelectController extends viewAnalyticsController implement
 			}
 	}
 	
-	private EventHandler<ActionEvent> updateStatusAction(){
+	private EventHandler<ActionEvent> updateStatusAction(int sid,String name,int jid){
 		return new EventHandler<ActionEvent>() {
 
 			@Override
 			public void handle(ActionEvent arg0) {
 				// TODO Auto-generated method stub
-			
+				TextInputDialog tDialog=new TextInputDialog();
+				tDialog.setHeaderText("Enter the status (ACCEPTED,REJECTED,SHORTLISTED) for: "+name.toUpperCase());
+				tDialog.setContentText("STATUS");
+				TextFields.bindAutoCompletion(tDialog.getEditor(),ApplicantSelectController.statuslist);
+				tDialog.showAndWait();
+				new DBHandler().updateApplicantStatus(tDialog.getEditor().getText(), sid, jid);
 			}
 			
-		};
-	}
-	
-	private EventHandler<KeyEvent> getStatusAction(int sid){
-		return new EventHandler<KeyEvent>() {
-			@Override
-			public void handle(KeyEvent arg0) {
-				System.out.println(sid+": "+arg0.getText());
-				
-			}	
 		};
 	}
 	

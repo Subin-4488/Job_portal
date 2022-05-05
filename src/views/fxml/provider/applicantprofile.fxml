@@ -16,7 +16,7 @@
    <content>
       <AnchorPane fx:id="profilePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1018.0" prefWidth="530.0">
          <children>
-            <VBox alignment="CENTER" layoutX="-10.0" layoutY="-5.0" prefHeight="510.0" prefWidth="527.0" spacing="10.0">
+            <VBox alignment="CENTER" layoutX="-1.0" layoutY="-5.0" prefHeight="510.0" prefWidth="518.0" spacing="10.0">
                <children>
                   <ImageView fx:id="avatar" fitHeight="121.0" fitWidth="117.0" pickOnBounds="true">
                      <image>
@@ -34,6 +34,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="nametxt" editable="false" text="Name">
                            <font>
@@ -48,6 +55,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="emailtxt" editable="false" text="Email">
                            <font>
@@ -62,6 +76,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/mobile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="mobiletxt" editable="false" text="Mobile">
                            <font>
@@ -76,6 +97,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/location.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="citytxt" editable="false" text="City">
                            <font>
@@ -90,6 +118,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/date.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="dobtxt" editable="false" text="Date of birth">
                            <font>
@@ -104,6 +139,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/male.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="gendertxt" editable="false" text="Gender">
                            <font>
@@ -127,6 +169,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/school.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="schooltxt" editable="false" promptText="School name">
                            <font>
@@ -141,6 +190,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/stream.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="streamtxt" editable="false" promptText="Stream">
                            <font>
@@ -155,6 +211,13 @@
                            <font>
                               <Font name="Century Gothic" size="15.0" />
                            </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../assets/grade_post.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Label>
                         <TextField fx:id="cgpatxt" editable="false" promptText="CGPA">
                            <font>
@@ -166,15 +229,22 @@
                   <HBox alignment="CENTER" prefHeight="102.0" prefWidth="522.0" spacing="40.0" />
                </children>
             </VBox>
-            <TextArea fx:id="resumetxtarea" editable="false" layoutY="709.0" prefHeight="308.0" prefWidth="534.0">
-               <font>
-                  <Font name="Century Gothic Italic" size="15.0" />
-               </font></TextArea>
             <Label alignment="CENTER" layoutX="201.0" layoutY="681.0" prefHeight="19.0" prefWidth="127.0" text="Resume" underline="true">
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/file.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Label>
+            <TextArea fx:id="resumetxtarea" editable="false" layoutY="709.0" prefHeight="308.0" prefWidth="534.0">
+               <font>
+                  <Font name="Century Gothic Italic" size="15.0" />
+               </font></TextArea>
          </children>
          <stylesheets>
             <URL value="@../../css/button.css" />

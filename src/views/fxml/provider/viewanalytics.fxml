@@ -3,6 +3,8 @@
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -11,7 +13,7 @@
    <children>
       <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="407.0" prefWidth="507.0">
          <children>
-            <Button fx:id="jobspostedbtn" layoutX="94.0" layoutY="141.0" mnemonicParsing="false" onAction="#listJobsPosted" prefHeight="95.0" prefWidth="150.0" text="Jobs Posted">
+            <Button fx:id="jobspostedbtn" layoutX="84.0" layoutY="142.0" mnemonicParsing="false" onAction="#listJobsPosted" prefHeight="95.0" prefWidth="170.0" text="Jobs Posted">
                <stylesheets>
                   <URL value="@../../css/button.css" />
                   <URL value="@../../css/textfield.css" />
@@ -19,8 +21,15 @@
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/track.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <Button fx:id="viewapplicatinsbtn" layoutX="275.0" layoutY="141.0" mnemonicParsing="false" onAction="#viewApplicantsAction" prefHeight="95.0" prefWidth="150.0" text="View Applicants">
+            <Button fx:id="viewapplicatinsbtn" layoutX="265.0" layoutY="142.0" mnemonicParsing="false" onAction="#viewApplicantsAction" prefHeight="95.0" prefWidth="169.0" text="View Applicants">
                <stylesheets>
                   <URL value="@../../css/button.css" />
                   <URL value="@../../css/textfield.css" />
@@ -28,6 +37,13 @@
                <font>
                   <Font name="Century Gothic" size="15.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/track.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
             <Label layoutX="204.0" layoutY="58.0" text="Job Analytics">
                <font>

@@ -35,23 +35,23 @@
             <Font name="Century Gothic" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nametxt" layoutX="43.0" layoutY="207.0" prefHeight="38.0" prefWidth="276.0" promptText="Name">
+      <TextField fx:id="nametxt" layoutX="55.0" layoutY="207.0" prefHeight="38.0" prefWidth="276.0" promptText="Name">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="emailtxt" layoutX="43.0" layoutY="259.0" prefHeight="38.0" prefWidth="276.0" promptText="Email">
+      <TextField fx:id="emailtxt" layoutX="55.0" layoutY="259.0" prefHeight="38.0" prefWidth="276.0" promptText="Email">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="mobiletxt" layoutX="43.0" layoutY="311.0" prefHeight="38.0" prefWidth="276.0" promptText="Mobile">
+      <TextField fx:id="mobiletxt" layoutX="55.0" layoutY="311.0" prefHeight="38.0" prefWidth="276.0" promptText="Mobile">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </TextField>
-      <DatePicker fx:id="dob" layoutX="43.0" layoutY="427.0" prefHeight="26.0" prefWidth="192.0" promptText="DD/MM/YYYY" />
-      <ComboBox fx:id="city" layoutX="43.0" layoutY="374.0" prefHeight="32.0" prefWidth="192.0" promptText="City" visibleRowCount="3" />
+      <DatePicker fx:id="dob" layoutX="55.0" layoutY="427.0" prefHeight="26.0" prefWidth="192.0" promptText="DD/MM/YYYY" />
+      <ComboBox fx:id="city" layoutX="55.0" layoutY="374.0" prefHeight="32.0" prefWidth="192.0" promptText="City" visibleRowCount="3" />
       <Separator layoutX="365.0" layoutY="135.0" orientation="VERTICAL" prefHeight="390.0" prefWidth="14.0">
          <effect>
             <DropShadow height="0.0" radius="0.0" width="0.0">
@@ -66,10 +66,17 @@
             <Font name="Century Gothic" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="resumebtn" layoutX="390.0" layoutY="212.0" mnemonicParsing="false" onAction="#resumeSelectAction" text="Resume">
+      <Button fx:id="resumebtn" layoutX="400.0" layoutY="212.0" mnemonicParsing="false" onAction="#resumeSelectAction" text="Resume">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/file.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Label fx:id="filelabel" alignment="CENTER" layoutX="485.0" layoutY="212.0" prefHeight="32.0" prefWidth="200.0" text="no file choosen..." wrapText="true">
          <font>
@@ -80,6 +87,13 @@
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/signup.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <ImageView fx:id="backbtn" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="131.0" onMousePressed="#backButton" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -89,12 +103,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <PasswordField fx:id="passtxt" layoutX="401.0" layoutY="317.0" prefHeight="26.0" prefWidth="276.0" promptText="Password">
+      <PasswordField fx:id="passtxt" layoutX="427.0" layoutY="324.0" prefHeight="30.0" prefWidth="230.0" promptText="Password">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </PasswordField>
-      <RadioButton fx:id="maleradio" layoutX="43.0" layoutY="478.0" mnemonicParsing="false" selected="true" text="Male">
+      <RadioButton fx:id="maleradio" layoutX="55.0" layoutY="478.0" mnemonicParsing="false" selected="true" text="Male">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
@@ -102,11 +116,51 @@
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
       </RadioButton>
-      <RadioButton fx:id="femaleradio" layoutX="128.0" layoutY="478.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
+      <RadioButton fx:id="femaleradio" layoutX="170.0" layoutY="478.0" mnemonicParsing="false" text="Female" toggleGroup="$gender">
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
       </RadioButton>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="23.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/namebadge.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="24.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="23.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/mobile.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="24.0" layoutY="375.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/location.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="24.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/date.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="24.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/male.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="137.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/female.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="399.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/password.png" />
+         </image>
+      </ImageView>
    </children>
    <stylesheets>
       <URL value="@../css/button.css" />

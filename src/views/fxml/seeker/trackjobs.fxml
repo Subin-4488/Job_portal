@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
@@ -63,7 +65,7 @@
                   <Font name="Century Gothic" size="13.0" />
                </font>
             </Label>
-            <Label fx:id="locationlabel" prefHeight="16.0" prefWidth="174.0" text="location">
+            <Label fx:id="locationlabel" prefHeight="16.0" prefWidth="113.0" text="location">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>
@@ -102,19 +104,26 @@
             <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
          </padding>
       </Separator>
-      <Label layoutX="315.0" layoutY="185.0" text="Status:">
+      <Label layoutX="272.0" layoutY="182.0" text="Status:">
+         <font>
+            <Font name="Century Gothic Bold" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/hub.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="statuslabel" layoutX="362.0" layoutY="182.0" prefHeight="26.0" prefWidth="144.0" text="Status" textFill="RED">
          <font>
             <Font name="Century Gothic Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="statuslabel" layoutX="386.0" layoutY="185.0" prefHeight="26.0" prefWidth="122.0" text="Status" textFill="RED">
-         <font>
-            <Font name="Century Gothic Bold" size="20.0" />
-         </font>
-      </Label>
-      <HBox layoutX="40.0" layoutY="217.0" prefHeight="37.0" prefWidth="267.0" spacing="7.0">
+      <HBox layoutX="40.0" layoutY="217.0" prefHeight="38.0" prefWidth="199.0" spacing="7.0">
          <children>
-            <Label prefHeight="16.0" prefWidth="122.0" text="Date applied:">
+            <Label prefHeight="16.0" prefWidth="190.0" text="Date applied:">
                <font>
                   <Font name="Century Gothic" size="13.0" />
                </font>
@@ -129,5 +138,10 @@
             <Insets bottom="10.0" left="15.0" right="5.0" top="10.0" />
          </padding>
       </HBox>
+      <Label fx:id="message" layoutX="275.0" layoutY="222.0" prefHeight="26.0" prefWidth="221.0" text="You will be contacted by the recruiter" textFill="RED" underline="true" visible="false">
+         <font>
+            <Font name="Century Gothic Italic" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

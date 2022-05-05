@@ -50,6 +50,13 @@
          <font>
             <Font name="Century Gothic" size="15.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../assets/signup.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <ImageView fx:id="backbtn" accessibleRole="BUTTON" fitHeight="24.0" fitWidth="24.0" layoutX="14.0" layoutY="130.0" onMousePressed="#backButton" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -58,6 +65,31 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/namebadge.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/location.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="386.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/password.png" />
+         </image>
       </ImageView>
    </children>
    <stylesheets>

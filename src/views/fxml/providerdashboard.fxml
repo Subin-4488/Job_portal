@@ -17,25 +17,53 @@
          <children>
             <VBox alignment="CENTER" layoutY="-4.0" prefHeight="390.0" prefWidth="186.0" spacing="20.0">
                <children>
-                  <Button fx:id="profilebtn" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="37.0" prefWidth="158.0" text="PROFILE">
+                  <Button fx:id="profilebtn" alignment="CENTER" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="37.0" prefWidth="158.0" text="PROFILE">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Button fx:id="postjobbtn" mnemonicParsing="false" onAction="#postjobaction" prefHeight="38.0" prefWidth="158.0" text="POST JOB">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Button fx:id="viewanalyticsbtn" mnemonicParsing="false" onAction="#viewanalyticsaction" prefHeight="38.0" prefWidth="158.0" text="VIEW ANALYTICS">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/track.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Button fx:id="signoutBtn" mnemonicParsing="false" onAction="#signoutButtonAction" prefHeight="37.0" prefWidth="158.0" text="SIGN OUT">
                      <font>
                         <Font name="Century Gothic" size="15.0" />
                      </font>
+                     <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/signout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children>
                <padding>
