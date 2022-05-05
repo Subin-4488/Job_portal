@@ -1,0 +1,2 @@
+@../../assets replaced with @assets  for image view
+@../css replaced with @views/css for css
